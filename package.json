@@ -1,0 +1,25 @@
+{
+  "name": "reciclarg-hackathon-backend",
+  "version": "1.0.0",
+  "description": "Proyecto Hackathon Los Chip-eros",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server",
+    "dev": "nodemon src/server"
+  },
+  "author": "Equipo Los Chip-eros",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "nodemon": "^2.0.20"
+  }
+}

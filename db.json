@@ -1,0 +1,36 @@
+{
+    "contenedores": [
+        {
+            "titulo":"Contenedor Amarillo",
+            "descripcion":"El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases.",
+            "boton":"Saber más"
+        },
+        {
+            "titulo":"Contenedor Azul",
+            "descripcion":"El contenedor azul es el correspondiente para depositar papel y cartón.",
+            "boton":"Saber más"
+        },
+        {
+            "titulo":"Contenedor Verde",
+            "descripcion":"El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.",
+            "boton":"Saber más"
+        }
+    ],
+    "infoContenedores": [
+        {
+            "tituloInfo": "Contenedor Amarillo",
+            "descripcionInfo":"El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases.",
+            "backsideInfo":"El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases. En este tipo de contenedores se debe almacenar todo material que esté hecho a base de plástico. Como botellas de plástico, envases de alimentos, bolsas de plástico, briks de leche, etc. También las latas de conserva y de refrescos deben depositarse en el contenedor amarillo."
+        },
+        {
+            "tituloInfo": "Contenedor Verde",
+            "descripcionInfo":"El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.",
+            "backsideInfo":"El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio. En esta categoría deben reciclarse las botellas de vidrio, tarros, trozos de espejos y cristales rotos, entre otros. En esta categoría no entran los materiales como la cerámica o la porcelana, tampoco hay que depositar metales ni plásticos. Antes de tirar una botella o tarro de vidrio al contenedor verde hay que quitarle el tapón y reciclarlo en el contenedor correspondiente según sea de metal, de plástico o de corcho."
+        },
+        {
+            "tituloInfo": "Contenedor Azul",
+            "descripcionInfo":"El contenedor azul es el correspondiente para depositar papel y cartón.",
+            "backsideInfo":"El contenedor azul es el correspondiente para depositar papel y cartón. Ete tipo de contenedores está diseñado para almacenar cualquier tipo de cartón procedente de cajas, envases de cartón y cualquier tipo de papel como periódicos, revistas, documentos, folletos, papeles de envolver, pancartas de publicación, entre otros. Es importante plegar las cajas de cartón antes de depositarlas en el contenedor azul para que ocupen el menor espacio posible y den cabida a más material para reciclar."
+        }
+    ]
+}
