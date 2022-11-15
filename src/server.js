@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const morgan = require('morgan');
 const hbs = require('hbs');
-const mongoose = require('./database/db.database');
+//const mongoose = require('./database/db.database');
 const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
 const port = process.env.PORT || 3000;
@@ -24,6 +24,6 @@ hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 
 //Routes
-app.get('/', require('./routes/index.routes'));
+app.use('/', require('./routes/index.routes'));
 
 app.listen(port, () => console.log(`Servidor establecido en el puerto ${port}!`));

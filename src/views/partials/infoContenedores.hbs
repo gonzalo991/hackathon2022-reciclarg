@@ -1,9 +1,7 @@
-<section id="team" class="pb-5">
-    <h4 class="text-low">A continuación, veremos los diferentes contenedores de reciclaje que existen según su
-        color.</p>
+<div id="team" class="pb-5">
+    <h4 class="text-low">{{titulo}}</p>
         <div class="container">
             <div class="row">
-                {{#each results}}
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
@@ -11,51 +9,39 @@
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <p><img class=" img-fluid" src="img/map-amarillo.svg" alt="card image"></p>
-                                        <h4 class="card-title">{{tituloInfo}}</h4>
-                                        <p class="card-text">{{descripcionInfo}}</p>
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        <h4 class="card-title">{{amarillo}}</h4>
+                                        <p class="card-text">{{amarilloDescripcion}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="backside">
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">{{tituloInfo}}</h4>
-                                        <p class="card-text">{{backsideInfo}}</p>
+                                        <h4 class="card-title">{{amarillo}}</h4>
+                                        <p class="card-text">{{amarilloBackside}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{/each}}
-                <!--   <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                         <div class="mainflip">
                             <div class="frontside">
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <p><img class=" img-fluid" src="img/map-verde.svg" alt="card image"></p>
-                                        <h4 class="card-title">Contenedor Verde</h4>
-                                        <p class="card-text">El contenedor verde, también conocido como iglú verde,
-                                            es el destinado para depositar vidrio.</p>
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        <h4 class="card-title">{{verde}}</h4>
+                                        <p class="card-text">{{verdeDescripcion}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="backside">
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">Contenedor Verde</h4>
-                                        <p class="card-text">El contenedor verde, también conocido como iglú verde,
-                                            es el destinado para depositar vidrio. En esta categoría deben
-                                            reciclarse las botellas de vidrio, tarros, trozos de espejos y cristales
-                                            rotos, entre otros. En esta categoría no entran los materiales como la
-                                            cerámica o la porcelana, tampoco hay que depositar metales ni plásticos.
-                                            Antes de tirar una botella o tarro de vidrio al contenedor verde hay que
-                                            quitarle el tapón y reciclarlo en el contenedor correspondiente según
-                                            sea de metal, de plástico o de corcho.</p>
-
+                                        <h4 class="card-title">{{verde}}</h4>
+                                        <p class="card-text">{{verdeBackside}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -69,33 +55,22 @@
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <p><img class=" img-fluid" src="img/map-azul.svg" alt="card image"></p>
-                                        <h4 class="card-title">Contenedor Azul</h4>
-                                        <p class="card-text">El contenedor azul es el correspondiente para depositar
-                                            papel y cartón.</p>
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                        <h4 class="card-title">{{azul}}</h4>
+                                        <p class="card-text">{{azulDescripcion}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="backside">
                                 <div class="card">
                                     <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">Contenedor Azul</h4>
-                                        <p class="card-text">El contenedor azul es el correspondiente para depositar
-                                            papel y cartón. Ete tipo de contenedores está diseñado para almacenar
-                                            cualquier tipo de cartón procedente de cajas, envases de cartón y
-                                            cualquier tipo de papel como periódicos, revistas, documentos, folletos,
-                                            papeles de envolver, pancartas de publicación, entre otros. Es
-                                            importante plegar las cajas de cartón antes de depositarlas en el
-                                            contenedor azul para que ocupen el menor espacio posible y den cabida a
-                                            más material para reciclar.</p>
-
+                                        <h4 class="card-title">{{azul}}</h4>
+                                        <p class="card-text">{{azulBackside}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-
+                </div>
             </div>
         </div>
-</section>
+</div>
