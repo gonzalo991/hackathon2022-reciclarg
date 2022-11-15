@@ -1,7 +1,6 @@
 const controller = {}
 const nodemailer = require('nodemailer');
-const {proto} = require('once');
-
+const { proto } = require('once');
 
 controller.index = (req, res) => {
     res.render('index', {
@@ -20,11 +19,8 @@ controller.index = (req, res) => {
 }
 
 controller.sendMail = (req, res) => {
-    const nombre = req.body.nombre;
-    const mail = req.body.mail;
-    const telefono = req.body.telefono;
-    const asunto = req.body.asunto;
-    const consulta = req.body.consulta;
+
+    const { nombre, mail, telefono, asunto, consulta } = req.body
 
     const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
@@ -34,7 +30,7 @@ controller.sendMail = (req, res) => {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS
         }
-    });
+    })
 
     const mailOptions = {
         to: "Equipo de Reciclarg",
@@ -49,17 +45,15 @@ controller.sendMail = (req, res) => {
         <p>Teléfono: ${telefono}</p>
         <br>
         <p>Email: ${mail}</p>`
-    };
+    }
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, (error) => {
         if (error) {
             res.status(500).send(error.message);
         } else {
-            res.status(200).send(info.message);
+            res.status(200).json(req.body);
         }
-        res.status(200).jsonp(reqbody)
-    });
+    })
 }
-
 
 module.exports = controller;
