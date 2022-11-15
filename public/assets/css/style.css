@@ -704,6 +704,21 @@ section .section-title {
     box-shadow: -1px 3px 18px 0px rgba(0, 0, 0, 0.75);
 }
 
+form .errMsg {
+    color: indianred;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+form .invalid {
+    outline: 1.5px solid indianred;
+}
+
+form .valid {
+    outline: 1.5px solid seagreen;
+}
+
 p {
     font-size: 1rem;
     color: #000000;
