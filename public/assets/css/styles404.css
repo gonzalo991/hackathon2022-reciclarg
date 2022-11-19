@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* formato a html */
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+
+}
+
+/* formato a body */
+.body_404 {
+ 
+  background-attachment: fixed;
+  background-image: url("Imagen3.png");
+  backdrop-filter: blur(6px);
+
+
+
+}
+ 
+/* formato universal */
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .btn_volver{
+   color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow:0 2px 2px #000000;
+    font-size: 20px;
+  }
+  .btn_volver:hover{
+    -webkit-transition:all 0.6s ease;
+    -moz-transition:all 0.6s ease;
+    -o-transition:all 0.6s ease;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgrgba(240, 0, 0, 0.22);
+    text-decoration: none;
+    color: #309df0;
+ 
+    
+  }
+  .notFounds svg
+{
+    
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgrgba(240, 0, 0, 0.22);
+  }
+  .body_404{
+    font-family: "Roboto", sans-serif;
+    background: url(/fondo2.png);
+    display:flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(15, 4, 4);
+    text-shadow: 10px;
+    text-shadow:0 2px 2px #000000;
+  }
+  .h1_404{
+    width: 100%;
+    display:block;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 5em;
+    text-shadow:0 2px 2px #000000;
+    font-family: "Roboto", sans-serif;
+    
+  }
+  body > div{
+    min-width: 25vw;
+    color: white;
+    text-shadow: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  #box2{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    
+  }
+  .h2_notfound{
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    text-shadow:0 2px 2px #000000;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    
+  
+    
+  }
+  .notFounds{
+    font-family: "Roboto", sans-serif;
+    fill: white;
+    stroke: white;
+    stroke-width: 1.5;
+    animation: lupa 5s infinite;
+    text-align: center;
+    align-items: center;
+  }
+  @keyframes lupa{
+    from{
+      fill: white;
+      stroke: white;
+      stroke-dasharray: 0;
+    }to{
+      fill: white;
+      stroke: white;
+      stroke-dasharray: 95;
+    }
+  }
+  .notFounds rect{
+    stroke: none;
+  }
+  
+  @media screen and (max-width: 600px){
+    body{
+      flex-direction: column;
+    }
+  }
