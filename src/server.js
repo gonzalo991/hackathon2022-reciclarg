@@ -14,8 +14,10 @@ app.use(morgan('dev'));
 //Static files
 app.use(express.static(path.join(__dirname, '../public')));
 
-//Decodificación de peticiones json
+//Decodificación de peticiones json y mail
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 
 //Motor de plantillas
 app.set('view engine', 'hbs');
@@ -24,6 +26,6 @@ hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 
 //Routes
-app.use(require('./routes/index.routes'));
+app.use('/',require('./routes/index.routes'));
 
 app.listen(port, () => console.log(`Servidor establecido en el puerto ${port}!`));

@@ -1,4 +1,5 @@
 const controller = {}
+const nodemailer = require('nodemailer');
 
 controller.index = (req, res) => {
     res.render('index', {
@@ -39,6 +40,54 @@ controller.tutoriales = (req, res) => {
         plastico: "Video de reciclaje de botellas",
         vidrio: "Video de reciclaje de Vidrio"
     })
+}
+
+//Nodemailer
+
+controller.exito = (req, res) => {
+    res.render('exito');
+}
+
+controller.sendEmail = (req, res) => {
+    const { nombre, mail, telefono, asunto, consulta } = req.body;
+
+
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        auth: {
+            user: 'hattie.armstrong@ethereal.email',
+            pass: '4mkxFvEdPpJ1bGXz4H'
+        }
+    });
+
+    const mailOptions = {
+        to: "equiporeciclarg@reciclarg.com",
+        from: "Conacto Reciclarg",
+        subject: "Consulta de un seguidor",
+        html: `<h1 style="color: cadetblue; font-size: 1.5rem; font-weight:bold;">El siguiente mensaje fue enviado desde la página
+        de Reciclarg</h1>
+        <br>
+        <p style="color: #000; font-size: 1.2rem;">${consulta}</p>
+        <br><br>
+        <p style="color:dimgrey; font-weight: bold;">Teléfono: ${telefono}</p>
+        <br>
+        <p style="color:dimgrey; font-weight: bold;">Email: ${mail}</p>
+        <br>
+        <p style="color: goldenrod; font-size: 1.5rem; font-weight: bold;">Atte Sr/a : ${nombre}</p>`
+    }
+
+    transporter.sendMail(mailOptions, (err,info) => {
+        if(err){
+            console.log(err.message)
+        }else {
+            console.log("enviado "+ info.response);
+        }
+    });
+
+    res.redirect('exito');
+    console.log('mensaje enviado');
+
 }
 
 module.exports = controller;
