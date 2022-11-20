@@ -94,6 +94,10 @@ i {
   transition: all 0.7s;
 }
 
+.nav-link {
+  color: #fff;
+}
+
 #navbarSupportedContent a:not(:only-child):after {
   content: "\f105";
   position: absolute;

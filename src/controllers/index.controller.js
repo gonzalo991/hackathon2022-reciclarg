@@ -1,6 +1,5 @@
 const controller = {}
-const nodemailer = require('nodemailer');
-const { proto } = require('once');
+const Recompensas = require('../models/recompensas.models');
 
 
 controller.index = (req, res) => {
@@ -19,12 +18,18 @@ controller.index = (req, res) => {
     });
 };
 
-controller.error = (req, res) => {
+controller.error = async (req, res) => {
     res.render('error404');
 };
 
-controller.recompensas = (req, res) => {
+controller.recompensas = async (req, res) => {
+    //const reco = await Recompensas.find();
+    // const recompensas = await reco.json();
 
+    res.render('recompensas' /**{
+        results: recompensas,
+        empresas: "ESTAS EMPRESAS APOYAN EL PROYECTO"
+    } */);
 };
 
 controller.tutoriales = (req, res) => {
