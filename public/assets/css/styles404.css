@@ -14,7 +14,7 @@ html {
 .body_404 {
  
   background-attachment: fixed;
-  background-image: url("Imagen3.png");
+  background-image: url("../../img/Imagen3.png");
   backdrop-filter: blur(6px);
 
 
@@ -22,9 +22,6 @@ html {
 }
  
 /* formato universal */
-
-
-
 
 
 *{
@@ -57,7 +54,7 @@ html {
   }
   .body_404{
     font-family: "Roboto", sans-serif;
-    background: url(/fondo2.png);
+    background: url("../../img/fondo2.png");
     display:flex;
     align-items: center;
     text-align: center;

@@ -1,6 +1,6 @@
 const controller = {}
 const nodemailer = require('nodemailer');
-const {proto} = require('once');
+const { proto } = require('once');
 
 
 controller.index = (req, res) => {
@@ -17,8 +17,29 @@ controller.index = (req, res) => {
         verdeDescripcion: "El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.",
         verdeBackside: "En esta categoría deben reciclarse las botellas de vidrio, tarros, trozos de espejos y cristales rotos, entre otros. En esta categoría no entran los materiales como la cerámica o la porcelana, tampoco hay que depositar metales ni plásticos. Antes de tirar una botella o tarro de vidrio al contenedor verde hay que quitarle el tapón y reciclarlo en el contenedor correspondiente según sea de metal, de plástico o de corcho."
     });
+};
+
+controller.error = (req, res) => {
+    res.render('error404');
+};
+
+controller.recompensas = (req, res) => {
+
+};
+
+controller.tutoriales = (req, res) => {
+    res.render('tutoriales', {
+        aprende: "Aprende a reciclar con nosotros",
+        descripcion: "En esta sección encontraremos diferentes videos de reciclaje, tanto como botellas, vidrios y cartón.",
+        descripcionCon: "Mirá los siguientes videos y aprende de manera fácil como reciclar.",
+        carton: "Video de reciclaje de Cartón",
+        plastico: "Video de reciclaje de botellas",
+        vidrio: "Video de reciclaje de Vidrio"
+    })
 }
 
+
+/*
 controller.sendMail = (req, res) => {
     const nombre = req.body.nombre;
     const mail = req.body.mail;
@@ -60,6 +81,6 @@ controller.sendMail = (req, res) => {
         res.status(200).jsonp(reqbody)
     });
 }
-
+*/
 
 module.exports = controller;
