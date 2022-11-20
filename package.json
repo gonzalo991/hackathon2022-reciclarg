@@ -21,7 +21,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "json-server": "^0.17.1",
     "nodemon": "^2.0.20"
   }
 }

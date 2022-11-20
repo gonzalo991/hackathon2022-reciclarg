@@ -18,7 +18,7 @@ const validarCampo = (input, callback) => {
     } else {
         input.classList.add("invalid");
         input.classList.remove("valid");
-    };
+    }
 }
 
 const form = document.querySelector("#form");
