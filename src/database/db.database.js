@@ -4,4 +4,5 @@ const URI = 'mongodb://u7l6ribndfngpobjsgkc:jPpk8GZQHqyfF4nONodi@n1-c2-mongodb-c
 mongo.connect(URI).then(db => console.log('Conexión a la base de datos exitosa'))
     .catch(err => console.error(err));
 
+
 module.exports = mongo;

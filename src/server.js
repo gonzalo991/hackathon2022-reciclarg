@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const morgan = require('morgan');
 const hbs = require('hbs');
-//const mongoose = require('./database/db.database');
+const mongoose = require('./database/db.database');
 const dotenv = require('dotenv');
 dotenv.config({ path: '../.env' });
 const port = process.env.PORT || 3000;

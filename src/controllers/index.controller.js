@@ -1,5 +1,6 @@
 const controller = {}
 const nodemailer = require('nodemailer');
+const Recompensas = require('../models/recompensas.models');
 
 controller.index = (req, res) => {
     res.render('index', {
@@ -22,13 +23,17 @@ controller.error = async (req, res) => {
 };
 
 controller.recompensas = async (req, res) => {
-    //const reco = await Recompensas.find();
-    // const recompensas = await reco.json();
 
-    res.render('recompensas' /**{
-        results: recompensas,
-        empresas: "ESTAS EMPRESAS APOYAN EL PROYECTO"
-    } */);
+    const recompensas = await Recompensas.find({}).exec((err, recoData) => {
+        if (!recoData) {
+            throw err;
+        } else {
+            res.render('recompensas', {
+                empresas: "ESTAS EMPRESAS APOYAN EL PROYECTO",
+                results: recoData
+            })
+        }
+    });
 };
 
 controller.tutoriales = (req, res) => {
