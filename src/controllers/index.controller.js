@@ -1,6 +1,4 @@
 const controller = {}
-const Recompensas = require('../models/recompensas.models');
-
 
 controller.index = (req, res) => {
     res.render('index', {

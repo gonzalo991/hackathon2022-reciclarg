@@ -24,6 +24,6 @@ hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 
 //Routes
-app.use('/', require('./routes/index.routes'));
+app.use(require('./routes/index.routes'));
 
 app.listen(port, () => console.log(`Servidor establecido en el puerto ${port}!`));
