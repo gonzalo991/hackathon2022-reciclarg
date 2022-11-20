@@ -55,7 +55,7 @@ form.mail.addEventListener("input", ev => {
 });
 
 form.telefono.addEventListener("input", ev => {
-   
+
     const callback = (value) => {
         const regExp = /^[\+\[0-9]{2,4}]?[0-9]{2,5}?[\s-]?[0-9]{6,9}$/; //Expresión regylar para validar el email ejemplo@dominio.com.ar
 
@@ -74,7 +74,7 @@ form.telefono.addEventListener("input", ev => {
 
 form.asunto.addEventListener("blur", ev => {
     const callback = (value) => {
-        const regExp = /^[\w\s]{1,150}$/; //Expresión regylar para validar el email ejemplo@dominio.com.ar
+        const regExp = /^[\w\s][a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{1,150}$/; //Expresión regylar para validar el email ejemplo@dominio.com.ar
 
         let msg = "";
 

@@ -45,7 +45,10 @@ controller.tutoriales = (req, res) => {
 //Nodemailer
 
 controller.exito = (req, res) => {
-    res.render('exito');
+    res.render('exito', {
+        enviado: "TU MENSAJE SE ENVIÓ EXITOSAMENTE",
+        respuesta: "TE RESPONDEREMOS A LA BREVEDAD"
+    });
 }
 
 controller.sendEmail = (req, res) => {
@@ -56,8 +59,8 @@ controller.sendEmail = (req, res) => {
         host: 'smtp.ethereal.email',
         port: 587,
         auth: {
-            user: 'hattie.armstrong@ethereal.email',
-            pass: '4mkxFvEdPpJ1bGXz4H'
+            user: 'timmothy.johns@ethereal.email',
+            pass: 'xXCTsUX89BKsWe8JV7'
         }
     });
 
@@ -77,11 +80,11 @@ controller.sendEmail = (req, res) => {
         <p style="color: goldenrod; font-size: 1.5rem; font-weight: bold;">Atte Sr/a : ${nombre}</p>`
     }
 
-    transporter.sendMail(mailOptions, (err,info) => {
-        if(err){
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
             console.log(err.message)
-        }else {
-            console.log("enviado "+ info.response);
+        } else {
+            console.log("enviado " + info.response);
         }
     });
 

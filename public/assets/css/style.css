@@ -942,9 +942,6 @@ input {
         height: auto;
         padding: 7%;
     }
-
-
-
 }
 
 @media (max-width: 700px) {
@@ -977,4 +974,24 @@ input {
         font-size: 25px;
     }
 
+}
+
+.msgSuccess {
+    text-align: center;
+    text-shadow: 2px 1px 3px rgb(13, 72, 3);
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    
+    color: #2acb21;
+}
+
+.resSuccess {
+    text-align: center;
+    text-shadow: 2px 1px 3px rgb(13, 72, 3);
+
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    color: #2acb21;
 }
