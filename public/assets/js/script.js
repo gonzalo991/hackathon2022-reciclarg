@@ -76,3 +76,37 @@ $(document).ready(function () {
     });
     feather.replace();
 });
+
+// Loop selectors
+var videos = document.querySelectorAll(".youtube");
+for (var i = 0; i < videos.length; i++) {
+    var youtube = videos[i];
+    // Get function
+    getVideos(youtube);
+}
+
+// Get videos function
+function getVideos(el) {
+    var img = document.createElement("img");
+    // ingrsasr imagenes
+    img.setAttribute('src', 'http://i.ytimg.com/vi/' + el.id + '/hqdefault.jpg');
+    // agregar clase a las imagens
+    img.setAttribute('class', 'thumb');
+    // enveber los divs
+    var video = document.createElement("div");
+    // Remove this if you like
+    video.setAttribute("class", "video_here");
+    // Insertar los tag
+    el.appendChild(img);
+    el.appendChild(video);
+    // click al video
+    el.addEventListener('click', function () {
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute('class', 'youtube_video');
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/' +
+            this.id + '?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1');
+        // Remplazar imagen por video
+        this.parentNode.replaceChild(iframe, this);
+    }, false);
+}
+// fin tutoriales

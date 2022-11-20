@@ -1,5 +1,5 @@
 const controller = {}
-
+const nodemailer = require('nodemailer');
 
 controller.index = (req, res) => {
     res.render('index', {
@@ -15,7 +15,79 @@ controller.index = (req, res) => {
         verdeDescripcion: "El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.",
         verdeBackside: "En esta categoría deben reciclarse las botellas de vidrio, tarros, trozos de espejos y cristales rotos, entre otros. En esta categoría no entran los materiales como la cerámica o la porcelana, tampoco hay que depositar metales ni plásticos. Antes de tirar una botella o tarro de vidrio al contenedor verde hay que quitarle el tapón y reciclarlo en el contenedor correspondiente según sea de metal, de plástico o de corcho."
     });
+};
+
+controller.error = async (req, res) => {
+    res.render('error404');
+};
+
+controller.recompensas = async (req, res) => {
+    //const reco = await Recompensas.find();
+    // const recompensas = await reco.json();
+
+    res.render('recompensas' /**{
+        results: recompensas,
+        empresas: "ESTAS EMPRESAS APOYAN EL PROYECTO"
+    } */);
+};
+
+controller.tutoriales = (req, res) => {
+    res.render('tutoriales', {
+        aprende: "Aprende a reciclar con nosotros",
+        descripcion: "En esta sección encontraremos diferentes videos de reciclaje, tanto como botellas, vidrios y cartón.",
+        descripcionCon: "Mirá los siguientes videos y aprende de manera fácil como reciclar.",
+        carton: "Video de reciclaje de Cartón",
+        plastico: "Video de reciclaje de botellas",
+        vidrio: "Video de reciclaje de Vidrio"
+    })
 }
 
+//Nodemailer
+
+controller.exito = (req, res) => {
+    res.render('exito');
+}
+
+controller.sendEmail = (req, res) => {
+    const { nombre, mail, telefono, asunto, consulta } = req.body;
+
+
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        auth: {
+            user: 'hattie.armstrong@ethereal.email',
+            pass: '4mkxFvEdPpJ1bGXz4H'
+        }
+    });
+
+    const mailOptions = {
+        to: "equiporeciclarg@reciclarg.com",
+        from: "Conacto Reciclarg",
+        subject: "Consulta de un seguidor",
+        html: `<h1 style="color: cadetblue; font-size: 1.5rem; font-weight:bold;">El siguiente mensaje fue enviado desde la página
+        de Reciclarg</h1>
+        <br>
+        <p style="color: #000; font-size: 1.2rem;">${consulta}</p>
+        <br><br>
+        <p style="color:dimgrey; font-weight: bold;">Teléfono: ${telefono}</p>
+        <br>
+        <p style="color:dimgrey; font-weight: bold;">Email: ${mail}</p>
+        <br>
+        <p style="color: goldenrod; font-size: 1.5rem; font-weight: bold;">Atte Sr/a : ${nombre}</p>`
+    }
+
+    transporter.sendMail(mailOptions, (err,info) => {
+        if(err){
+            console.log(err.message)
+        }else {
+            console.log("enviado "+ info.response);
+        }
+    });
+
+    res.redirect('exito');
+    console.log('mensaje enviado');
+
+}
 
 module.exports = controller;
