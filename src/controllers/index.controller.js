@@ -4,7 +4,7 @@ const Recompensas = require('../models/recompensas.models');
 
 controller.index = (req, res) => {
     res.render('index', {
-        titulo: "A continuación, veremos los diferentes contenedores de reciclaje que existen según su color.",
+        titulo: "Contenedores para el reciclaje que existen según su color.",
         amarillo: "Contenedor Amarillo",
         amarilloDescripcion: "El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases.",
         amarilloBackside: "En este tipo de contenedores se debe almacenar todo material que esté hecho a base de plástico. Como botellas de plástico, envases de alimentos, bolsas de plástico, briks de leche, etc. También las latas de conserva y de refrescos deben depositarse en el contenedor amarillo.",
